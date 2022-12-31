@@ -13,4 +13,3 @@ jobs:
         framework: protractor
         tests: ./e2e/test-suites/*.e2e-spec.ts
         token: ${{ secrets.GITHUB_TOKEN }}
-        typescript: true
