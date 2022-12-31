@@ -12,5 +12,5 @@ jobs:
       run: |
           cd CourtRoom_RemoteCounsel
           npm install
-          node node_modules/protractor/bin/webdriver-manager update
+          node ./node_modules/protractor/bin/webdriver-manager update --gecko=false
           npm run e2e
