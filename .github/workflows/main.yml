@@ -11,6 +11,6 @@ jobs:
     - uses: testomatio/check-tests@stable
       with:
         framework: protractor
-        tests: e2e/test-suites/*.e2e-spec.ts
+        tests: ./e2e/test-suites/*.e2e-spec.ts
         token: ${{ secrets.GITHUB_TOKEN }}
         typescript: true
