@@ -10,4 +10,5 @@ jobs:
         fetch-depth: 1
     - name: Run tests
       run: |
+          cd CourtRoom_RemoteCounsel
           npm run e2e
