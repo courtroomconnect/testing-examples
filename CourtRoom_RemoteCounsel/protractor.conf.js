@@ -6,16 +6,19 @@ exports.config = {
         default: './e2e/test-suites/*.e2e-spec.ts',
     },
     capabilities: {
-        "browserName": "chrome"
+        "browserName": "chrome",
+        chromeOptions: {
+            args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+          }
     },
     params: {
         user1: {
-            email: "sharddha@fullstacklabs.co",
-            password: "Action@06"
+            username: "sharddha",
+            password: "changemeplease123&"
         }
     },
     directConnect: true,
-    baseUrl: 'https://staging.remotecounsel.com/',
+    baseUrl: 'https://cvn.mediasite.com/mediasite/Manage',
     framework: 'jasmine',
     jasmineNodeOpts: {
         showColors: true,
