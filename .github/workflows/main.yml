@@ -10,7 +10,4 @@ jobs:
         fetch-depth: 1
     - name: Run tests
       run: |
-          cd CourtRoom_RemoteCounsel
-          npm install
-          node node_modules/protractor/bin/webdriver-manager update
           npm run e2e
