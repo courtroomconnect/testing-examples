@@ -7,9 +7,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
-    - uses: testomatio/check-tests@stable
-      with:
-        framework: protractor
-        tests: ./e2e/test-suites/*.e2e-spec.ts
-        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 1
+    - name: Run tests
+      run: |
+          npm install
+          node node_modules/protractor/bin/webdriver-manager update
+          npm run e2e
