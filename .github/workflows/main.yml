@@ -14,13 +14,3 @@ jobs:
           npm install
           node ./node_modules/protractor/bin/webdriver-manager update --gecko=false
           npm run e2e
-          
-    - name: screenshots-ci-action
-      uses: flameddd/screenshots-ci-action@master
-      with:
-        url: https://github.com
-  
-    - uses: actions/upload-artifact@v2 # Uplaod screenshots to Actions Artifacts via actions/upload-artifact@v2
-      with:
-        path: screenshots
-        name: Download-screenshots
