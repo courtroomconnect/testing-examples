@@ -1,16 +1,34 @@
 name: CI
 on: [push]
 jobs:
-  test:
+screenshots:
     runs-on: ubuntu-latest
-    name: Check Tests
     steps:
     - uses: actions/checkout@v2
+    - name: install puppeteer-headful
+      uses: mujo-code/puppeteer-headful@master # Required for headful puppeteer
+      env:
+        CI: 'true'
+    - name: screenshots-ci-action
+      uses: flameddd/screenshots-ci-action@master
       with:
-        fetch-depth: 1
-    - name: Run tests
-      run: |
-          cd CourtRoom_RemoteCounsel
-          npm install
-          node ./node_modules/protractor/bin/webdriver-manager update --gecko=false
-          npm run e2e
+        url: https://github.com
+        devices: iPhone 6
+    - uses: actions/upload-artifact@v2 # Uplaod screenshots to Actions Artifacts via actions/upload-artifact@v2
+      with:
+        path: screenshots
+        name: Download-screenshots
+        
+    test:
+      runs-on: ubuntu-latest
+      name: Check Tests
+      steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Run tests
+        run: |
+            cd CourtRoom_RemoteCounsel
+            npm install
+            node ./node_modules/protractor/bin/webdriver-manager update --gecko=false
+            npm run e2e
