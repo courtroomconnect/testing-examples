@@ -32,3 +32,15 @@ jobs:
             npm install
             node ./node_modules/protractor/bin/webdriver-manager update --gecko=false
             npm run e2e
+
+    screenshotsn:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+
+        - uses: actions/download-artifact@v3
+          with:
+            name: my-artifact
+
+        - name: Display structure of downloaded files
+          run: ls -R
