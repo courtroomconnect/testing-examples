@@ -12,6 +12,7 @@ describe('Courtroom suite', () => {
     let signupPageHelper: SignupPageHelper;
 
     beforeEach(() => {
+        console.log("inside before each-----");
         loginPageHelper = new LoginPageHelper();
         loginPageHelper.goToPage(browser.baseUrl);
         commonPageHelper = new CommonPageHelper();
@@ -21,6 +22,8 @@ describe('Courtroom suite', () => {
     });
 
     xit('Validate login into the application', async () => {
+        console.log('Inside the login one-----');
+        console.log(await browser.getCurrentUrl());
         const email = CommonPageHelper.userOneEmail;
         const password = CommonPageHelper.userOnePassword;
         loginPageHelper.loginWithUser(email, password);
@@ -29,6 +32,8 @@ describe('Courtroom suite', () => {
     });
 
     fit('Validate signup for the application', async () => {
+        console.log('Inside the signup one-----');
+        console.log(await browser.getCurrentUrl());
         const randomString = await CommonPageHelper.getRandomString(5);
         const email = 'test' + randomString + '@mailinator.com';
         const company = 'testcomp_' + randomString;

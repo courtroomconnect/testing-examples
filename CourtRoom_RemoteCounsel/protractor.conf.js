@@ -13,12 +13,12 @@ exports.config = {
     },
     params: {
         user1: {
-            username: "sharddha",
+            email: "sharddha@fullstacklabs.co",
             password: "changemeplease123&"
         }
     },
     directConnect: true,
-    baseUrl: 'https://cvn.mediasite.com/mediasite/Manage',
+    baseUrl: 'https://staging.remotecounsel.com/',
     framework: 'jasmine',
     jasmineNodeOpts: {
         showColors: true,
