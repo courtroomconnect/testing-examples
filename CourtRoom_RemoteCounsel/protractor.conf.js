@@ -15,7 +15,7 @@ exports.config = {
         }
     },
     directConnect: true,
-    baseUrl: 'https://staging.remotecounsel.com/',
+    baseUrl: 'https://remotecounsel.com/',
     framework: 'jasmine',
     jasmineNodeOpts: {
         showColors: true,

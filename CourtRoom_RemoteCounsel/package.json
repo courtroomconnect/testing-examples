@@ -12,6 +12,7 @@
     "@angular/compiler": "^6.0.5",
     "@angular/core": "^6.0.5",
     "jasmine-spec-reporter": "^4.2.1",
+    "mail-listener6": "^2.0.3",
     "protractor": "5.4.2",
     "rxjs": "^6.2.1"
   },
@@ -21,6 +22,7 @@
     "@types/node": "~10.3.3",
     "codelyzer": "~4.3.0",
     "jasmine-core": "~3.1.0",
+    "mail-listener2": "^0.3.1",
     "ts-node": "~6.1.1",
     "tslint": "~5.10.0",
     "typescript": "~2.9.2",
